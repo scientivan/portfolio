@@ -29,6 +29,48 @@
     padding: 0px;
 }
 
+
+#bottom-container{
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height:fit-content;
+    margin-bottom: 100px;
+}
+
+
+#midcontainer{
+    height: fit-content;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: flex;
+    box-shadow: 0px 0px 1px 0px #001B2E;
+    flex-direction: row;
+    align-items: start;
+    background-color: white;
+    text-align: center;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    width: 80vw;
+}
+
+#submidcontainer{
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 50%;
+}
+
+
+
+
 a{
     text-decoration: none;
     color: white;
@@ -148,6 +190,7 @@ body{
 
 #firstpage-home p{
     margin-top: 10px;
+    color: green;
 }
 #btn-row{
     display: flex;
@@ -159,7 +202,7 @@ body{
 
 
 #firstpage-home img{
-    width:80vw;
+    width: 45vw;
     height: auto;
     max-width: 300px;
 }
@@ -327,7 +370,6 @@ button:hover{
 }
 
 #fifthpage-home{
-    margin-top: 100px;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -409,6 +451,7 @@ footer p{
 
 /* pc  untuk index.html thok (dan ada navbar untuk pc tapi kan udah ada di file yg lain)*/
 @media screen and (min-width : 600px) {
+    
     
     .pc{
         display: block;
@@ -772,6 +815,53 @@ footer p{
         padding-right: 10px;
     }
 
+    
+#bottom-container{
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height:fit-content;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+
+#midcontainer{
+    height: fit-content;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: flex;
+    box-shadow: 0px 0px 1px 0px #001B2E;
+    flex-direction: row;
+    align-items: start;
+    background-color: white;
+    text-align: center;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+}
+
+#submidcontainer{
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 50%;
+}
+
+
+
+#divider{
+    position: absolute;
+    border: 1px solid #001B2E;
+    height: 150px;
+}
+
     footer{
         margin-top: 100px;
         background-color: #001B2E;
@@ -908,6 +998,10 @@ a{
     margin-top: 0px;
 }   
 
+#thirdpage-row p{
+    font-size: 3vw;
+}
+
 }
 
 /* khusus firstpage di index.html */
@@ -930,7 +1024,7 @@ a{
 }
 
 #wujudkan-rumah{
-    font-size: 3em;
+    font-size: 2em;
     margin-top: 0px;
     margin-bottom: 0px;
     font-family: "MontserratBold";
@@ -938,6 +1032,7 @@ a{
 
 #firstpage-home p{
     margin-top: 10px;
+    color: green;
 }
 #btn-row{
     display: flex;
@@ -952,7 +1047,9 @@ a{
     width:80vw;
     height: auto;
     max-width: 300px;
-}   
+}
+
+
 }
 
 @media screen and (min-width:1100px) and (max-width : 1481px){

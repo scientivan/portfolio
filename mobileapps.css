@@ -200,7 +200,7 @@
     
 
     #image-container{
-        width: 40%;
+        width: 80%;
         max-width: 400px;
     }
 
@@ -573,10 +573,6 @@
     .container-photo{
         display: flex;
         flex-direction: column;
-    }
-    .container-photo-row{
-        display: flex;
-        flex-direction: row;
     }
         
 

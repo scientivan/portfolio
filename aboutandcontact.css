@@ -1,4 +1,4 @@
-    @font-face {
+@font-face {
     font-family: MontserratBold;
     src: url("font/Montserrat/static/Montserrat-Bold.ttf");
 }
@@ -23,6 +23,17 @@
     src: url("font/Montserrat/static/Montserrat-Light.ttf");
 }
 
+
+button{
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px 0px #001B2E;
+    border: 0px solid #001B2E;    
+    background-color: #e39519;
+    font-family: "MontserratSemiBold";
+    width: 50%; 
+    height: 6vh;
+    font-size: 1vw;
+}
 /* mobile untuk file ini thok */
 @media screen and (max-width : 600px){
     .mobile{
@@ -510,6 +521,7 @@
 /* pc untuk file ini thok */
 @media screen and (min-width: 768px)
 {
+
     .pc{
         display: block;
     }
@@ -568,6 +580,7 @@
         border-radius: 10px;
         box-shadow: 0px 0px 2px 0px #001B2E;
     }
+    
 
     html, body {
         max-width: 100%;
@@ -722,10 +735,6 @@
         width: 50%;
     }
     
-    #submidcontainer img{
-        border-radius: 100px;
-        margin-bottom: 20px;
-    }
     
     #submidcontainer p{
         margin-top: 10px;
