@@ -1,0 +1,288 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="project.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rumah Dijual | Simple Art & Nature</title>
+        <meta charset="UTF-8">
+        <link rel="shortcut icon" type="x-icon" href="images/logo_simpleart.png">
+    </head>
+
+    <body>
+        <script src="project.js"></script>
+        
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var activeContainer = document.querySelectorAll(".container");
+                var banyak_produk = document.getElementById('jumlah-produk-ditemukan')
+                banyak_produk.innerText = activeContainer.length.toString() + " Produk ditemukan";
+            }, false);
+        </script>
+        
+        <div id="navbar">
+            <div>
+                <img id="page-logo" style="cursor: pointer;" src="images/logo_simpleart.png" alt=""onclick="window.location = 'index.html'" >
+            </div>
+            <nav class="pc" id="menu-pc">
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="portofolio.html">Portofolio</a></li>
+                    <li><a href="project.html" style="color: #e39519";>Rumah Dijual</a></li>
+                    <li><a href="aboutandcontact.html">Tentang Kami</a></li>
+                    <li><a href="aboutandcontact.html#container">Hubungi Kami</a></li>
+                </ul>
+            </nav>
+            
+            
+            <div class="mobile" id="menu-mobile">
+                <div class="nav-dropdown" onclick="DropDownMenu()">
+                        <img class="menu-logo" src="images/menu.png" alt="">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="menu-container mobile" id="menu-mobile">
+            <div id="menu-container">
+                <ul class="nav-menu"> 
+                    <li><a href="index.html" >Beranda</a></li>
+                    <li><a href="portofolio.html">Portofolio</a></li>
+                    <li><a href="project.html" style="color: #e39519";>Rumah Dijual</a></li>
+                    <li><a href="aboutandcontact.html">Tentang Kami</a></li>
+                    <li><a href="aboutandcontact.html#container">Hubungi Kami</a></li>    
+                </ul>
+            </div>
+        </div>
+
+        <div id="main-content" class="slides">
+            
+            <div id="filter-section">
+                <div id="dropdown-sort">    
+                    <p id="jumlah-produk-ditemukan"></p>
+                </div>
+                <div id="filter-container">
+                    <div id="filter-hapus">
+                        <h3>Filter</h3>
+                        <button onclick="clearFilter()" id="hapus_filter">Hapus Filter</button>
+                    </div>
+                    <div id="horizontal"></div>
+                    
+                    <h4>Kategori </h4>
+                    <div class="list-kategori">
+                        <p>Bangunan</p>
+                        <!-- <button onclick="filterProduct()" id="bangunan" class="btn-list-kategori"></button> -->
+                        <input type="checkbox"  onclick="filterProduct('kategori')" class="btn-list-kategori clear" id="bangunan" >
+                    </div>
+                    <div class="list-kategori">
+                        <p>Tanah</p>
+                        <!-- <button onclick="filterProduct()" id="tanah" class="btn-list-kategori"></button> -->
+                        <input type="checkbox" onclick="filterProduct('kategori')" class="btn-list-kategori clear" id="tanah">
+                    </div>
+                    <div class="list-kategori">
+                        <p>Kos</p>
+                        <!-- <button onclick="filterProduct()" id="kos" class="btn-list-kategori"></button> -->
+                        <input type="checkbox" onclick="filterProduct('kategori')" class="btn-list-kategori clear" id="kos">
+                    </div>
+
+                    <div id="horizontal"></div>
+                    <h4>Lokasi</h4>
+                    <div id="list-lokasi">
+                        <p>Yogyakarta</p>
+                        <input type="checkbox" onclick="filterProduct('lokasi')" class="btn-list-lokasi clear" id="yogyakarta">
+                        <!-- <button class="btn-list-lokasi">hai</button> -->
+                        <!-- <input type="checkbox" id="yogyakarta" value="yogyakarta"> -->
+                    </div>
+                    <div id="list-lokasi">
+                        <p>Sleman</p>
+                        <input type="checkbox" onclick="filterProduct('lokasi')" class="btn-list-lokasi clear" id="sleman"><!-- <button class="btn-list-lokasi">hai</button> -->
+
+                        <!-- <input type="checkbox" id="sleman" value="sleman"> -->
+                    </div>
+                    <div id="list-lokasi">
+                        <p>Bantul</p>
+                        <input type="checkbox" onclick="filterProduct('lokasi')" class="btn-list-lokasi clear" id="bantul">
+                        <!-- <button class="btn-list-lokasi">hai</button> -->
+                        <!-- <input type="checkbox" id="bantul" value="bantul"> -->
+                    </div>
+                    <div id="list-lokasi">
+                        <p>Gunung Kidul</p>
+                        <input type="checkbox" onclick="filterProduct('lokasi')" class="btn-list-lokasi clear" id="gunungkidul"><!-- <button class="btn-list-lokasi">hai</button> -->
+
+                        <!-- <input type="checkbox" id="gunungkidul" value="gunungkidul"> -->
+                    </div>
+                    <div id="list-lokasi">
+                        <p>Kulon Progo</p>
+                        <input type="checkbox" onclick="filterProduct('lokasi')" class="btn-list-lokasi clear" id="kulonprogo">
+                        <!-- <button class="btn-list-kategori">hai</button> -->
+                        <!-- <input type="checkbox" id="kulonprogo" value="kulonprogo"> -->
+                    </div>
+                    <div id="horizontal"></div>
+                    <h4 style="margin-bottom: 10px;">Urutkan berdasarkan</h4>
+                    <div style="width: 100%;">
+                        <div class="dropdown" onclick="DropDown()">
+                            <div class="select">
+                                <p class="selected">Luas / Harga</p>
+                                <div class="caret"></div>
+                            </div>
+                            <ul class="menu"> 
+                                <div style="display: flex;flex-direction: column;width: fit-content;">
+                                    <li onclick="UrutkanBerdasar('harga-termurah')" id="harga-termurah">Harga Termurah </li>
+                                    <li onclick="UrutkanBerdasar('harga-termahal')" id="harga-termahal">Harga Tertinggi</li>
+                                </div>
+
+                                <div style="display: flex;flex-direction: column;">
+                                    <li onclick="UrutkanBerdasar('luas-terkecil')" id="luas-terkecil">Luas Terkecil</li>
+                                    <li onclick="UrutkanBerdasar('luas-terbesar')" id="luas-terbesar">Luas Terbesar</li>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="selling-section">
+
+                <div class="project-row">
+                    
+                    <div class="product container bangunan sleman">
+                        <div class="img-container">
+                            <img src="images/b.jpg" alt="">
+                        </div>
+                        <div class="description">
+                            <h4>Rumah Lempong</h4>
+                            <p><b>3</b> kamar tidur <b> &nbsp;3</b> kamar mandi &nbsp;<b></b><b>1</b> garasi &nbsp;<b>1</b> kolam renang</p>
+                        </div>
+                        <div class="alamat">
+                            <p style="margin-bottom: 3px;"><b>Kategori</b> : Bangunan</p>  
+                            <p style="margin-bottom: 5px;" class="luas-produk"><b>Luas</b> : 1500m2</p>  
+                        
+                            <p><b>Alamat : </b>Jalan Nglempongsari No 2 NG 1. NO 2A,Ngaglik,Sleman</p>
+                            <div class="harga-tombol">
+                                <h4 class="harga-produk">Rp2M</h4>
+                                <button onclick="window.location='rumahdijual/rumahjombor.html';">Selengkapnya</button>
+                            </div>
+                        </div>
+                    </div> 
+                    
+                    <div class="product container tanah bantul">
+                        <div class="img-container">
+                            <img src="images/d.jpg" alt="" >
+                        </div>
+                        <div class="description">
+                            <h4>Rumah Jombor</h4>
+                            <p><b>3</b> kamar tidur <b> &nbsp;3</b> kamar mandi &nbsp;<b></b><b>1</b> garasi &nbsp;<b>1</b> kolam renang</p>
+                        </div>
+
+                        <div class="alamat">
+                            <p style="margin-bottom: 3px;"><b>Kategori</b> : Tanah</p> 
+                            <p style="margin-bottom: 5px;" class="luas-produk"><b>Luas</b> : 2000m2</p>  
+                            <p><b>Alamat : </b>Jalan Nglempongsari No 2 NG 1. NO 2A, Bantul, Bantul</p>
+                            <div class="harga-tombol">
+                                <h4 class="harga-produk">Rp3M</h4>
+                                <button>Selengkapnya</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product container tanah sleman">
+                        <div class="img-container">
+                            <img src="images/a.jpg" alt="" > 
+                        </div>
+                        <div class="description">
+                            <h4>Rumah Jombor</h4>
+                            <p><b>3</b> kamar tidur <b> &nbsp;3</b> kamar mandi &nbsp;<b></b><b>1</b> garasi &nbsp;<b>1</b> kolam renang</p>
+                        </div>
+
+                        <div class="alamat">
+                            <p style="margin-bottom: 3px;"><b>Kategori</b> : Tanah</p> 
+                            <p style="margin-bottom: 5px;" class="luas-produk"><b>Luas</b> : 1200m2</p>  
+                        
+                            <p><b>Alamat : </b>Jalan Nglempongsari No 2 NG 1. NO 2A,Ngemplak,Sleman</p>
+                            <div class="harga-tombol">
+                                <h4 class="harga-produk">Rp1.3M</h4>
+                                <button>Selengkapnya</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product container kos yogyakarta">
+                        <div class="img-container">
+                            <img src="images/c.jpg" alt="" >
+                        </div>
+                        <div class="description">
+                            <h4>Rumah Jombor</h4>
+                            <p><b>3</b> kamar tidur <b> &nbsp;3</b> kamar mandi &nbsp;<b></b><b>1</b> garasi &nbsp;<b>1</b> kolam renang</p>
+                        </div>
+
+                        <div class="alamat">
+                            <p style="margin-bottom: 3px;" ><b>Kategori</b> : Kos</p> 
+                            <p style="margin-bottom: 5px;" class="luas-produk"><b>Luas</b> : 1800m2</p>  
+                            <p><b>Alamat : </b>Jalan Nglempongsari No 2 NG 1. NO 2A, Kridosono, Kota Yogyakarta</p>
+                            <div class="harga-tombol">
+                                <h4 class="harga-produk">Rp1.9M</h4>
+                                <button>Selengkapnya</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="product container kos yogyakarta">
+                        <div class="img-container">
+                            <img src="images/c.jpg" alt="" >
+                        </div>
+                        <div class="description">
+                            <h4>Rumah Jombor</h4>
+                            <p><b>3</b> kamar tidur <b> &nbsp;3</b> kamar mandi &nbsp;<b></b><b>1</b> garasi &nbsp;<b>1</b> kolam renang</p>
+                        </div>
+
+                        <div class="alamat">
+                            <p style="margin-bottom: 3px;" ><b>Kategori</b> : Kos</p> 
+                            <p style="margin-bottom: 5px;" class="luas-produk"><b>Luas</b> : 1800m2</p>  
+                            <p><b>Alamat : </b>Jalan Nglempongsari No 2 NG 1. NO 2A, Kridosono, Kota Yogyakarta</p>
+                            <div class="harga-tombol">
+                                <h4 class="harga-produk">Rp1.3M</h4>
+                                     <button>Selengkapnya</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                
+            </div>
+        </div>
+    </body>
+    <center>
+        <footer>
+            <div id="footer-row">
+                <div id="logo-container">
+                    <div id="logo-content">
+                        <img src="images/logo_simpleart.png" alt="" width="200px">
+                    </div>
+                </div>
+                
+                <div id="about-us">
+                    <h3>Tentang Kami</h3>
+                    <p>Simple Art & Nature adalah team arsitek profesional sejak tahun 2008. <br>Kami hadir di industri perumahan berlokasi di Yogyakarta untuk memberi penyegaran dalam industri arsitektural.
+                    </p>
+
+                </div>
+    
+                <div id="about-us">
+                    <h3>Hubungi Kami</h3>
+                    <p>WhatsApp : <a style="color: #e39519;" href= "https://wa.me/+62811268667">wa.me/+62811268667</a>
+                    </p>
+                    <p>Email :  <a style="color: #e39519;" href= "https://wa.me/+62811268667">simpleartchitect@yahoo.com</a>
+                    </p>
+                </div>  
+
+
+                
+            </div>
+            <p style="margin-top: 50px;">
+                © 2024 by Simple Art & Nature Home Architect
+            </p>
+        </footer>
+
+    </center>
+</html>
