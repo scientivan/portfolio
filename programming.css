@@ -200,7 +200,7 @@
     
 
     #image-container{
-        width: 80%;
+        width: 40%;
         max-width: 400px;
     }
 
@@ -415,9 +415,10 @@
     }
 
     a{
+        box-sizing: border-box;
         text-decoration: none;
-        color: #001B2E;
     }
+    /* Menghapus bullet pada list */
     ul {
         list-style: none;
         padding: 0;
@@ -633,6 +634,10 @@
     .container-photo{
         display: flex;
         flex-direction: column;
+    }
+    .container-photo-row{
+        display: flex;
+        flex-direction: row;
     }
         
 
@@ -883,7 +888,6 @@
         max-width: 50px;
         margin-right: 7vw;
     }
-    
     
     ul {
         list-style: none;

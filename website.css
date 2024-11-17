@@ -418,7 +418,66 @@
         text-decoration: none;
         color: #001B2E;
     }
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
 
+    /* Styling untuk menu utama */
+    ul li {
+        display: inline-block;
+        position: relative;
+    }
+
+    ul li a {
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        padding: 15px;
+        color: #001B2E;
+        background-color: transparent;
+        transition: 0.3s;
+    }
+
+    ul li a:hover {
+        color: #e39519; /* Warna teks saat hover */
+    }
+
+    /* Styling untuk dropdown */
+    ul li ul.dropdown {
+        list-style: none;
+        position: absolute;
+        top: 100%; /* Posisi dropdown tepat di bawah menu utama */
+        left: 0;
+        display: none; /* Default dropdown tersembunyi */
+        padding: 0;
+        margin: 0;
+        background-color: #e39519; /* Warna latar dropdown */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Memberikan efek bayangan */
+        border-radius: 10px;
+    }
+
+    ul li ul.dropdown li {
+        display: block; /* Dropdown berbentuk vertikal */
+        margin: 0;
+    }
+
+    ul li ul.dropdown li a {
+        border-radius: 10px;
+        transition: 0.3s;
+    }
+
+    ul li ul.dropdown li a:hover {
+        background-color: #001B2E; /* Warna latar saat hover pada item dropdown */
+        color: #e39519;
+    }
+
+    /* Tampilkan dropdown saat menu utama di-hover */
+    ul li:hover ul.dropdown {
+        display: block;
+        z-index: 999; /* Menjaga dropdown tetap di atas elemen lain */
+    }
     
     a:hover{
         color: #e39519;
@@ -825,43 +884,95 @@
     }
     
     
-    .nav-menu{
-        opacity: 0;
-        display: none;
-        transition: 0.2s;
-        z-index: 1;
-        font-size: 11px;
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
     }
     
-    .nav-menu li{
+    /* Styling untuk menu utama */
+    ul li {
+        display: block; /* Pastikan menu utama menggunakan block */
+        position: relative; /* Agar dropdown muncul relatif terhadap elemen ini */
+    }
+    
+    ul li a {
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        color: white;
+        background-color: transparent;
+        padding: 10px 15px;
+        transition: 0.3s;
+    }
+    
+    ul li a:hover {
+        color: #e39519; /* Warna teks saat hover */
+    }
+    
+    /* Styling untuk dropdown */
+    ul li ul.dropdown {
+        list-style: none;
+        position: relative; /* Ubah menjadi relative agar tidak menutupi elemen di bawahnya */
+        width: 100%; /* Lebar dropdown */
+        display: none; /* Default dropdown tersembunyi */
+        padding: 0;
+        margin: 0;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+        z-index: 1;
+    }
+    
+    ul li ul.dropdown li a {
+        padding: 10px 15px; 
+        color: black;
+        background-color: #e39519;
+        transition: 0.3s;
+    }
+    
+    .dropdown.active {
+        display: block;
+    }
+    
+    
+    .nav-menu {
+        display: none; /* Sembunyikan dropdown secara default */
+        position: fixed; /* Ubah posisi menjadi fixed */
+        top: 50px; /* Atur posisi dropdown, misalnya 50px dari atas */
+        left: 50%; /* Posisikan dropdown di tengah layar */
+        transform: translateX(-50%); /* Pastikan dropdown benar-benar terpusat */
+        z-index: 10; /* Berada di atas elemen lainnya */
+        background-color: #001B2E; /* Background warna dropdown */
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Dropdown dalam keadaan aktif */
+    .nav-menu-open {
+        display: block;
+        gap: 0px;
+        align-items: center;
+        background-color: #001B2E;
+        opacity: 90%;
+        height: fit-content;
+        width: 100%;
+        margin-top: 0; /* Hilangkan margin top agar dropdown tidak tergeser */
+    }
+    
+    /* Styling untuk menu */
+    .nav-menu li {
         display: flex;
         flex-direction: column;
         margin: 0px;
         padding: 5px;
-        /* padding: 0.7em 0.5em;
-        margin: 0.3em 0; */
         border-radius: 0.5em;
-        cursor: pointer;
     }
     
-    .nav-menu-open{
-        display: flex;
-        flex-direction: column;
-        gap: 0px;
-        opacity: 1;
-        align-items: center;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        background-color: #001B2E;
-        margin-top: 12vw
-    }
-    
-    .menu-container{
+    /* Parent container */
+    .menu-container {
+        position: relative;
         margin-top: 10px;
         box-sizing: border-box;
-        width: 100%;
-        padding-left: 20px;
-        padding-right: 20px;
     }
     
     }

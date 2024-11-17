@@ -1,7 +1,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="portofolio.css">
+        <link rel="stylesheet" href="website.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Website - Portofolio | About Scientivan</title>
     </head>
@@ -13,7 +13,13 @@
             <nav class="pc" id="menu-pc">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="portofolio.html" style="color: #e39519";>Portofolio</a></li>
+                    <li>
+                        <a href="#" style="color: #e39519;">Portofolio</a>
+                        <ul class="dropdown"> 
+                            <li><a style="color: #e39519;background-color: #001B2E;" href="programming.html">Programming</a></li>
+                            <li><a href="organization.html">Organization</a></li>
+                        </ul>
+                    </li>
                     <li><a href="index.html#thirdpage-home">About Me</a></li>
                     <li><a href="index.html#bottom-container">Contact Me</a></li>
                 </ul>
@@ -30,11 +36,17 @@
 
         <div class="menu-container mobile" id="menu-mobile">
             <div id="menu-container">
-                <ul class="nav-menu"> 
+                <ul class="nav-menu">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="portofolio.html" style="color: #e39519";>Portofolio</a></li>
+                    <li class="dropdown-container">
+                        <a href="#" id="portfolio-button" style="color: #e39519;">Portfolio</a>
+                        <ul class="dropdown" id="portfolio-dropdown">
+                            <li><a style="color: #e39519;background-color: #001B2E;" href="programming.html">Programming</a></li>
+                            <li><a href="organization.html">Organization</a></li>
+                        </ul>
+                    </li>
                     <li><a href="index.html#thirdpage-home">About Me</a></li>
-                    <li><a href="index.html#bottom-container" >Contact Me</a></li>
+                    <li><a href="index.html#bottom-container">Contact Me</a></li>
                 </ul>
             </div>
         </div>
@@ -42,7 +54,7 @@
         <div id="main-page" class="slides">
             <div class="filter-portofolio">
                 <div id="filter-section" >
-                    <h4 onclick="window.location='portofolio.html'">All</h4>
+                    <h4 onclick="window.location='programming.html'">All</h4>
                     <h4 onclick="window.location='ai.html'" >Artificial Intelligence</h4>
                     <h4 onclick="window.location='website.html'"  style="color: #e39519" ;>Website</h4>
                     <h4 onclick="window.location='mobileapps.html'">Mobile Application</h4>

@@ -2,23 +2,32 @@
     <head>
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <title>Beranda | Simple Art & Nature</title>
+        <title>Beranda | About Scientivan</title>
         <link rel="stylesheet" href="index.css">
     </head>
 
     <body>
+        <script src="all.js"></script>
+
         <script>
             window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
         </script>
         
         <script defer src="/_vercel/insights/script.js"></script>
+
         <div id="navbar">
             <div>
             </div>
             <nav class="pc" id="menu-pc">
                 <ul>
-                    <li><a href="index.html" style="color: #e39519";>Home</a></li>
-                    <li><a href="portofolio.html">Portofolio</a></li>
+                    <li><a href="index.html" style="color: #e39519;">Home</a></li>
+                    <li>
+                        <a href="#">Portofolio</a>
+                        <ul class="dropdown"> 
+                            <li><a href="programming.html">Programming</a></li>
+                            <li><a href="organization.html">Organization</a></li>
+                        </ul>
+                    </li>
                     <li><a href="index.html#thirdpage-home">About Me</a></li>
                     <li><a href="index.html#bottom-container">Contact Me</a></li>
                 </ul>
@@ -35,16 +44,22 @@
 
         <div class="menu-container mobile" id="menu-mobile">
             <div id="menu-container">
-                <ul class="nav-menu"> 
-                    <li><a href="index.html" style="color: #e39519";>Home</a></li>
-                    <li><a href="portofolio.html">Portofolio</a></li>
+                <ul class="nav-menu">
+                    <li><a href="index.html" style="color: #e39519;">Home</a></li>
+                    <li class="dropdown-container">
+                        <a href="#" id="portfolio-button">Portfolio</a>
+                        <ul class="dropdown" id="portfolio-dropdown">
+                            <li><a href="programming.html">Programming</a></li>
+                            <li><a href="organization.html">Organization</a></li>
+                        </ul>
+                    </li>
                     <li><a href="index.html#thirdpage-home">About Me</a></li>
                     <li><a href="index.html#bottom-container">Contact Me</a></li>
-                        
                 </ul>
             </div>
         </div>
-        
+
+
         <div id="main-content" class="slides">
             <div id="firstpage-home">
                 <img class="mobile" id="mainlogo-mobile" src="images/dien.jpg" alt="">
@@ -82,14 +97,14 @@
         <div class="pc">
             <div id="midcontainer">
                 <div id="submidcontainer">
-                    <h4 style="font-size: 20px;margin-bottom: 20px;">Get to Know <br>More About Me</h4>
+                    <h4 style="font-size: 20px;margin-bottom: 20px;">Get in Touch with Me!</h4>
                     <a href="https://wa.me/+6282137609530">
                         <img src="images/icon/whatsapp.svg" alt="" height="50px" style="cursor: pointer;">
                     </a>
                 </div>
                 
                 <div id="submidcontainer">
-                    <h4 style="font-size: 1.2em;margin-bottom: 20px;">Follow Me on Social Media</h4>
+                    <h4 style="font-size: 1.2em;margin-bottom: 20px;">Get to Know <br>More About Me</h4>
                     <div>
                         <a href="https://instagram.com/dienmsk">
                             <img src="images/icon/instagram.svg" alt="" height="50px" style="margin-right: 10px;cursor: pointer;">
@@ -105,14 +120,14 @@
         <div class="mobile">
             <div id="midcontainer">
                 <div id="submidcontainer">
-                    <h4 style="font-size: 12px;margin-bottom: 20px;">Get to Know <br>More About Me</h4>
+                    <h4 style="font-size: 12px;margin-bottom: 20px;">Get in Touch with Me!</h4>
                     <a href="https://wa.me/+6282137609530">
                         <img src="images/icon/whatsapp.svg" alt="" height="40px" style="cursor: pointer;">
                     </a>
                 </div>
                 
                 <div id="submidcontainer">
-                    <h4 style="font-size: 12px;margin-bottom: 20px;">Follow Me on Social Media</h4>
+                    <h4 style="font-size: 12px;margin-bottom: 20px;">Get to Know <br>More About Me!</h4>
                     <div>
                         <a href="https://instagram.com/dienmsk">
                             <img src="images/icon/instagram.svg" alt="" height="40px" style="margin-right: 10px;cursor: pointer;">
